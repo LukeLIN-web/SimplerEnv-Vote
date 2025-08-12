@@ -1,20 +1,20 @@
-# SimplerEnv: Simulated Manipulation Policy Evaluation Environments for Real Robot Setups (Multi-model Support 🔥)
+# SimplerEnv-Vote
 
 
+
+SimplerEnv used in vote paper. Provide some useful utilities to calculate metrics.
+
+For installation, please refer to the original [SimplerEnv](https://github.com/simpler-env/SimplerEnv) repository.
+For installation with vote, please refer to https://github.com/LukeLIN-web/vote/tree/main?tab=readme-ov-file#simplerenv .
 
 ```bash
-
-
 python scripts/bridge.py /yourckptpath/  --devices 7 --ensembler vote
-
 python scripts/fractal.py /yourckptpath/  --devices 7 --ensembler vote
-
 
 # after finish, run 
 python grep.py 
 
 You will see the all results in results/combined_bridge.csv and results/combined_fractal.csv
-
 ```
 
 
@@ -347,14 +347,19 @@ TypeError: 'NoneType' object is not subscriptable
 ```
 
 
+
 ## Citation
 
-If you find our ideas / environments helpful, please cite our work at
-```
-@article{li24simpler,
-         title={Evaluating Real-World Robot Manipulation Policies in Simulation},
-         author={Xuanlin Li and Kyle Hsu and Jiayuan Gu and Karl Pertsch and Oier Mees and Homer Rich Walke and Chuyuan Fu and Ishikaa Lunawat and Isabel Sieh and Sean Kirmani and Sergey Levine and Jiajun Wu and Chelsea Finn and Hao Su and Quan Vuong and Ted Xiao},
-         journal = {arXiv preprint arXiv:2405.05941},
-         year={2024}
+If you use our code in your work, please cite [our paper](https://arxiv.org/abs/2507.05116):
+
+```bibtex
+@misc{lin2025votevisionlanguageactionoptimizationtrajectory,
+      title={VOTE: Vision-Language-Action Optimization with Trajectory Ensemble Voting}, 
+      author={Juyi Lin and Amir Taherin and Arash Akbari and Arman Akbari and Lei Lu and Guangyu Chen and Taskin Padir and Xiaomeng Yang and Weiwei Chen and Yiqian Li and Xue Lin and David Kaeli and Pu Zhao and Yanzhi Wang},
+      year={2025},
+      eprint={2507.05116},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.05116}, 
 }
 ```
